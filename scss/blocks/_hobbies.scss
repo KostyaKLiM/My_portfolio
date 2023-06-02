@@ -1,0 +1,29 @@
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  @include mobile{
+    padding-top: 50px;
+  }
+  &-title {
+    @include text($ffAdd, 46px, 50px, 700, #ffffff);
+    @include mobile{
+      @include text($ffAdd, 38px, 40px, 400, #ffffff);
+    }
+  }
+  &-disc {
+    @include text($ffMain, 28px, 32px, 400, #ffffff);
+    padding-top: 30px;
+    @include mobile{
+      @include text($ffMain, 24px, 28px, 400, #ffffff);
+    }
+  }
+  img {
+    max-width: 100%;
+    width: 450px;
+    height: 650px;
+    padding-top: 40px;
+  }
+}

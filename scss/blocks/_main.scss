@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+  gap: 20px;
+  @include mobile{
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  &-text {
+    &__title {
+      @include text($ffAdd, 46px, 50px, 700, #ffffff);
+      max-width: 600px;
+      @include mobile {
+        @include text($ffAdd, 38px, 40px, 400, #ffffff);
+        text-align: center;
+      }
+    }
+    &__disc {
+      @include text($ffAdd, 20px, 28px, 400, #ffffff);
+      max-width: 620px;
+      padding-top: 40px;
+      @include mobile {
+        @include text($ffMain, 16px, 22px, 400, #ffffff);
+        text-align: center;
+      }
+    }
+    &__cv {
+      padding-top: 40px;
+      @include mobile{
+text-align: center;
+      }
+    }
+    &__cv a {
+      display:inlane-block;
+      @include text($ffAdd, 24px, 28px, 700, $white);
+      background: #3b8077;
+      padding: 10px 30px;
+      border-radius: 20px;
+      transition: $transition;
+      @include mobile{
+        display: block;
+      }
+    }
+    &__cv a:hover {
+      color: #abc334;
+    }
+  }
+  .main-photo {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background: #9f5050;
+    border-radius: 50%;
+    &__user img {
+      top: 40px;
+      left: 40px;
+      position: absolute;
+      width: 220px;
+      height: 300px;
+    }
+  }
+}
+.main-photo .main-photo__user:nth-of-type(2) {
+  display: none;
+}
+.main-photo:hover .main-photo__user:nth-of-type(1) {
+  display: none;
+}
+.main-photo:hover .main-photo__user:nth-of-type(2) {
+  display: block;
+}
+.main-photo:hover {
+  cursor: pointer;
+}

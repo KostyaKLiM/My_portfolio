@@ -1,0 +1,47 @@
+.project {
+  padding-top: 100px;
+  @include mobile{
+    padding-top: 40px;
+  }
+  &-title {
+    @include text($ffAdd, 46px, 50px, 700, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile{
+      @include text($ffAdd, 38px, 40px, 400, #ffffff);
+      text-align: center;
+    }
+  }
+  &-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding-top: 50px;
+	 justify-items: center;
+	 @include tablet {
+		grid-template-columns: 1fr 1fr;
+	 }
+	 @include tablet-small {
+		grid-template-columns: 1fr;
+	 }
+    &__link {
+    }
+    &__img {
+		cursor: pointer;
+      width: 350px;
+      height: 300px;
+      max-width: 100%;
+      border-radius: 45px;
+      border: 3px solid #608b90;
+      overflow: hidden;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    &__img:hover {
+      border-radius: 50%;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}
